@@ -1,0 +1,7 @@
+# Ignoring everything by default
+/*
+
+!/.gitignore
+
+!/nixos
+!/nixos/*
