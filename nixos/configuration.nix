@@ -104,21 +104,20 @@
     xserver = {
       enable = true;
 
-      desktopManager.gnome3.enable = true;
-      desktopManager.default = "gnome3";
-#      desktopManager.xterm.enable = false;
+      desktopManager.default = "none";
+      desktopManager.xterm.enable = false;
       windowManager.xmonad.enable = true;
       windowManager.xmonad.enableContribAndExtras = true;
       windowManager.default = "xmonad";
 
       # Configure the macbook's touchpad
-#      synaptics = {
-#        enable = true;
-#        tapButtons = true;
-#        fingersMap = [ 0 0 0 ];
-#        buttonsMap = [ 1 3 2 ];
-#        twoFingerScroll = true;
-#      };
+      synaptics = {
+        enable = true;
+        tapButtons = true;
+        fingersMap = [ 0 0 0 ];
+        buttonsMap = [ 1 3 2 ];
+        twoFingerScroll = true;
+      };
     };
   };
 
