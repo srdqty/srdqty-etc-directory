@@ -85,6 +85,8 @@
     jq
     gettext
     terminator
+    xdotool
+    deadbeef
   ];
 
   nixpkgs.config.allowUnfree = true;
