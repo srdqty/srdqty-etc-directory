@@ -87,6 +87,7 @@
     terminator
     xdotool
     deadbeef
+    binutils
   ];
 
   nixpkgs.config.allowUnfree = true;
