@@ -79,9 +79,12 @@
     xclip
     haskellPackages.xmobar
     xscreensaver
-    spotify
     docker_compose
     gnupg
+    parcellite
+    jq
+    gettext
+    terminator
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -104,6 +107,8 @@
     xserver = {
       enable = true;
 
+#      xrandrHeads = [ "eDP1" "DP1" ];
+
       desktopManager.default = "none";
       desktopManager.xterm.enable = false;
       windowManager.xmonad.enable = true;
@@ -117,6 +122,7 @@
         fingersMap = [ 0 0 0 ];
         buttonsMap = [ 1 3 2 ];
         twoFingerScroll = true;
+        maxSpeed = "0.8";
       };
     };
   };
