@@ -18,6 +18,7 @@
     }
   ];
 
+  hardware.bluetooth.enable = true;
 
   boot.loader.grub.enable = false;
   boot.loader.systemd-boot.enable = true;
@@ -88,6 +89,10 @@
     xdotool
     deadbeef
     binutils
+
+    blueman
+    readline
+    stalonetray
   ];
 
   nixpkgs.config.allowUnfree = true;
