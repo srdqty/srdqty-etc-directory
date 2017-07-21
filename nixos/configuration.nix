@@ -31,8 +31,30 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    awscli
+    binutils
+    deadbeef
+    docker_compose
+    gettext
+    git
+    gnumake
+    gnupg
+    google-chrome
+    haskellPackages.xmobar
+    jq
+    networkmanagerapplet
+    parcellite
+    pciutils
+    silver-searcher
+    slack
+    stack
+    stalonetray
+    terminator
+    tree
     vim
-    spotify
+    xclip
+    xdotool
+    xscreensaver
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -82,7 +104,7 @@
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "16.09";
+  system.stateVersion = "17.03";
 
   virtualisation.docker.enable = true;
 
