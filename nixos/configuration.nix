@@ -38,7 +38,7 @@
     curl
     deadbeef
     docker_compose
-#    "dolphin-emu-5.0"
+    dolphinEmu
     dos2unix
     ffmpeg
     gambatte
