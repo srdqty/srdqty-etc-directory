@@ -87,12 +87,13 @@
     gettext
     terminator
     xdotool
-    deadbeef
     binutils
 
     blueman
     readline
     stalonetray
+    playerctl
+    qmmp
   ];
 
   nixpkgs.config.allowUnfree = true;
