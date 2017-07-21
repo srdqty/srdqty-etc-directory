@@ -58,6 +58,7 @@
     parcellite
     pciutils
     playerctl
+    PPSSPP
     qbittorrent
     racket
     readline
