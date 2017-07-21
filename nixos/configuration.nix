@@ -58,6 +58,7 @@
     parcellite
     pciutils
     playerctl
+    playonlinux
     PPSSPP
     qbittorrent
     racket
