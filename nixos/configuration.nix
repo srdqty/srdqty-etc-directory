@@ -33,28 +33,54 @@
   environment.systemPackages = with pkgs; [
     awscli
     binutils
+    blender
+    cabal2nix
+    curl
     deadbeef
     docker_compose
+#    "dolphin-emu-5.0"
+    dos2unix
+    ffmpeg
+    gambatte
     gettext
+    gimp
     git
     gnumake
     gnupg
     google-chrome
+    haskellPackages.hlint
     haskellPackages.xmobar
     jq
+    mlton
+    mpv
     networkmanagerapplet
+    nix-repl
     parcellite
     pciutils
+    playerctl
+    qbittorrent
+    racket
+    readline
+    sbt
+    scrot
     silver-searcher
     slack
+    smplayer # requires mpv
     stack
     stalonetray
+    steam
     terminator
+    tmux
     tree
+    unzip
+    usbutils
     vim
+    weechat
     xclip
     xdotool
+    xorg.xdpyinfo
     xscreensaver
+    yabause
   ];
 
   nixpkgs.config.allowUnfree = true;
