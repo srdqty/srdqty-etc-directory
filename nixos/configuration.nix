@@ -18,7 +18,7 @@
     }
   ];
 
-  hardware.bluetooth.enable = true;
+#  hardware.bluetooth.enable = true;
 
   boot.loader.grub.enable = false;
   boot.loader.systemd-boot.enable = true;
@@ -89,7 +89,7 @@
     xdotool
     binutils
 
-    blueman
+#    blueman
     readline
     stalonetray
     playerctl
@@ -116,23 +116,27 @@
     xserver = {
       enable = true;
 
+      libinput = {
+        enable = true;
+        accelProfile = "flat";
+      };
+
 #      xrandrHeads = [ "eDP1" "DP1" ];
 
       desktopManager.default = "none";
-      desktopManager.xterm.enable = false;
       windowManager.xmonad.enable = true;
       windowManager.xmonad.enableContribAndExtras = true;
       windowManager.default = "xmonad";
 
       # Configure the macbook's touchpad
-      synaptics = {
-        enable = true;
-        tapButtons = true;
-        fingersMap = [ 0 0 0 ];
-        buttonsMap = [ 1 3 2 ];
-        twoFingerScroll = true;
-        maxSpeed = "0.8";
-      };
+      # synaptics = {
+      #   enable = true;
+      #   tapButtons = true;
+      #   fingersMap = [ 0 0 0 ];
+      #   buttonsMap = [ 1 3 2 ];
+      #   twoFingerScroll = true;
+      #   maxSpeed = "0.8";
+      # };
     };
   };
 
