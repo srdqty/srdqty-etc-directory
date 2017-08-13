@@ -99,6 +99,10 @@
   # services.xserver.xkbOptions = "eurosign:e";
 
   services = {
+    mediatomb = {
+      enable = true;
+    };
+
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
@@ -126,6 +130,7 @@
       "disk"
       "audio"
       "video"
+      "mediatomb"
     ];
     createHome = true;
     home = "/home/srdqty";
