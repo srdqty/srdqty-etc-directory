@@ -67,6 +67,8 @@
   environment.systemPackages = with pkgs; [
     vim
     awscli
+    dos2unix
+    ffmpeg
     git
     gnumake
     google-chrome
@@ -91,9 +93,11 @@
 
 #    blueman
     readline
+    scrot
     stalonetray
     playerctl
     qmmp
+    unzip
   ];
 
   nixpkgs.config.allowUnfree = true;
