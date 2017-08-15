@@ -86,6 +86,7 @@
     xscreensaver
     yabause
     yosys
+    youtube-dl
   ];
 
   nixpkgs.config = {
@@ -122,6 +123,15 @@
           repo = "yosys";
           rev = "2cf0b5c1575b2ea4f8d949854eab7ab2bfdcd10e";
           sha256 = "00sfkq9z7g0ga5x3xphagyrvxrqafkd4429bx39lxwkm8l302w6h";
+        };
+      });
+
+      youtube-dl = pkgs.youtube-dl.overrideAttrs (oldAttrs: rec {
+        name = "youtube-dl-${version}";
+        version = "2017.08.13";
+        src = pkgs.fetchurl {
+          url = "https://yt-dl.org/downloads/${version}/${name}.tar.gz";
+          sha256 = "212c4e6a622d4e20ea888d1b1539ab063e171bed2a05c9e00db71ed53ab059dd";
         };
       });
     };
