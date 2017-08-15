@@ -31,6 +31,7 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    arachne-pnr
     awscli
     binutils
     blender
@@ -50,6 +51,7 @@
     google-chrome
     haskellPackages.hlint
     haskellPackages.xmobar
+    icestorm
     jq
     mlton
     mpv
@@ -83,9 +85,47 @@
     xorg.xdpyinfo
     xscreensaver
     yabause
+    yosys
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    packageOverrides = pkgs: {
+      icestorm = pkgs.icestorm.overrideAttrs (oldAttrs: rec {
+        name = "icestorm-${version}";
+        version = "2017.08.01";
+        src = pkgs.fetchFromGitHub {
+          owner = "cliffordwolf";
+          repo = "icestorm";
+          rev = "873eb9effaef6f97df24ca8d7b6eae3721303454";
+          sha256 = "1ywyalqavlj3134xsa6p95xqmdgjw4ixndkxfp77yk3bfs04sxl7";
+        };
+      });
+
+      arachne-pnr = pkgs.arachne-pnr.overrideAttrs (oldAttrs: rec {
+        name = "arachne-pnr-${version}";
+        version = "2017.06.29";
+        src = pkgs.fetchFromGitHub {
+          owner = "cseed";
+          repo = "arachne-pnr";
+          rev = "7e135edb31feacde85ec5b7e5c03fc9157080977";
+          sha256 = "1wszcx6hgw4q4r778zswrlwdwvwxq834bkajck8w9yfqwxs9lmq8";
+        };
+      });
+
+      yosys = pkgs.yosys.overrideAttrs (oldAttrs: rec {
+        name = "yosys-${version}";
+        version = "2017.08.14";
+        src = pkgs.fetchFromGitHub {
+          owner = "cliffordwolf";
+          repo = "yosys";
+          rev = "2cf0b5c1575b2ea4f8d949854eab7ab2bfdcd10e";
+          sha256 = "00sfkq9z7g0ga5x3xphagyrvxrqafkd4429bx39lxwkm8l302w6h";
+        };
+      });
+    };
+  };
 
   # List services that you want to enable:
 
