@@ -94,6 +94,7 @@
 #    blueman
     readline
     scrot
+    spotify
     stalonetray
     playerctl
     qmmp
