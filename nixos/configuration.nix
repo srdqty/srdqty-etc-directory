@@ -18,15 +18,32 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
-  # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };
+  i18n = {
+    consoleFont = "Lat2-Terminus16";
+    consoleKeyMap = "us";
+    defaultLocale = "en_US.UTF-8";
+  };
 
   # Set your time zone.
   time.timeZone = "America/New_York";
+
+  fonts = {
+    enableFontDir = true;
+    enableCoreFonts = true;
+    enableGhostscriptFonts = true;
+    fonts = with pkgs; [
+      bakoma_ttf
+      cm_unicode
+      corefonts
+      dejavu_fonts
+      gentium
+      google-fonts
+      inconsolata
+      liberation_ttf
+      terminus_font
+      ubuntu_font_family
+    ];
+  };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
