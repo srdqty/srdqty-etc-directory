@@ -179,6 +179,12 @@
       desktopManager.xterm.enable = false;
       windowManager.default = "xmonad";
     };
+
+    udev = {
+      extraRules = ''
+        ACTION=="add", ATTR{idVendor}=="0403", ATTR{idProduct}=="6010", MODE:="666"
+      '';
+    };
   };
 
   hardware.opengl.driSupport32Bit = true;
