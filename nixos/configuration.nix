@@ -87,6 +87,7 @@
     silver-searcher
     slack
     smplayer # requires mpv
+    spotify
     stack
     stalonetray
     steam
