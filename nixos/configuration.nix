@@ -82,9 +82,9 @@
     qbittorrent
     racket
     readline
+    ripgrep
     sbt
     scrot
-    silver-searcher
     slack
     smplayer # requires mpv
     spotify
