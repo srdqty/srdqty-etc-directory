@@ -99,6 +99,7 @@
     playerctl
     qmmp
     unzip
+#    haskell.compiler.ghc801
   ];
 
   nixpkgs.config.allowUnfree = true;
