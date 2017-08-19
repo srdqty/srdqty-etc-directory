@@ -92,10 +92,10 @@
     stack
     stalonetray
     steam
-    terminator
     tmux
     tree
     unzip
+    rxvt_unicode-with-plugins
     usbutils
     vim
     weechat
