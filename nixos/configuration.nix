@@ -70,6 +70,7 @@
     haskellPackages.xmobar
     icestorm
     jq
+    lastpass-cli
     mlton
     mpv
     networkmanagerapplet
@@ -150,6 +151,16 @@
         src = pkgs.fetchurl {
           url = "https://yt-dl.org/downloads/${version}/${name}.tar.gz";
           sha256 = "212c4e6a622d4e20ea888d1b1539ab063e171bed2a05c9e00db71ed53ab059dd";
+        };
+      });
+
+      lastpass-cli = pkgs.lastpass-cli.overrideAttrs (oldAttrs: rec {
+        version = "1.2.1";
+        src = pkgs.fetchFromGitHub {
+          owner = "lastpass";
+          repo = "lastpass-cli";
+          rev = "eda59f8b9a064c38b8a6d3093695ee0d29afe837";
+          sha256 = "0nrsrd5cqyv2zydzzl1vryrnj1p0x17cx1rmrp4kmzh83bzgcfvv";
         };
       });
     };
