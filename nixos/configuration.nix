@@ -59,6 +59,9 @@
     dolphinEmu
     dos2unix
     ffmpeg
+    figlet
+    fortune
+    fzf
     gambatte
     gettext
     gimp
@@ -69,12 +72,14 @@
     haskellPackages.hlint
     haskellPackages.xmobar
     icestorm
+    imagemagick
     jq
     lastpass-cli
     mlton
     mpv
     networkmanagerapplet
     nix-repl
+    p7zip
     parcellite
     pciutils
     playerctl
@@ -94,11 +99,13 @@
     steam
     tmux
     tree
+    unrar
     unzip
     rxvt_unicode-with-plugins
     usbutils
     vimHugeX
     weechat
+    wget
     xclip
     xdotool
     xorg.xdpyinfo
