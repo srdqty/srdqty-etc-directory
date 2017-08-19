@@ -97,7 +97,7 @@
     unzip
     rxvt_unicode-with-plugins
     usbutils
-    vim
+    vimHugeX
     weechat
     xclip
     xdotool
