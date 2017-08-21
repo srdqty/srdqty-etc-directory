@@ -100,9 +100,25 @@
     qmmp
     unzip
 #    haskell.compiler.ghc801
+    lastpass-cli
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    packageOverrides = pkgs: {
+
+      lastpass-cli = pkgs.lastpass-cli.overrideAttrs (oldAttrs: rec {
+        version = "1.2.1";
+        src = pkgs.fetchFromGitHub {
+          owner = "lastpass";
+          repo = "lastpass-cli";
+          rev = "eda59f8b9a064c38b8a6d3093695ee0d29afe837";
+          sha256 = "0nrsrd5cqyv2zydzzl1vryrnj1p0x17cx1rmrp4kmzh83bzgcfvv";
+        };
+      });
+    };
+  };
 
   # List services that you want to enable:
 
