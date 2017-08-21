@@ -65,6 +65,8 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    figlet
+    fortune
     vim
     awscli
     dos2unix
@@ -101,6 +103,8 @@
     unzip
 #    haskell.compiler.ghc801
     lastpass-cli
+    rxvt_unicode-with-plugins
+    numlockx
   ];
 
   nixpkgs.config = {
