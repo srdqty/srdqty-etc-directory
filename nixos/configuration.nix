@@ -76,7 +76,7 @@
     google-chrome
     networkmanagerapplet
     pciutils
-    silver-searcher
+    ripgrep
     slack
     stack
     trayer
