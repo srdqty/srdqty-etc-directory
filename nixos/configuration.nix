@@ -75,6 +75,7 @@
     imagemagick
     jq
     lastpass-cli
+    lolcat
     mlton
     mpv
     networkmanagerapplet
