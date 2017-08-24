@@ -5,3 +5,6 @@
 
 !/nixos
 !/nixos/*
+
+!/.machine-specific
+!/.machine-specific/*
