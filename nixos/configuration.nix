@@ -68,7 +68,7 @@
     lolcat
     figlet
     fortune
-    vim
+    vimHugeX
     awscli
     dos2unix
     ffmpeg
