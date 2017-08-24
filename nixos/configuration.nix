@@ -84,6 +84,7 @@
     tree
     xclip
     haskellPackages.xmobar
+    haskellPackages.hlint
     xscreensaver
     docker_compose
     gnupg
