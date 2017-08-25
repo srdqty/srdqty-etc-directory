@@ -73,6 +73,7 @@
     haskellPackages.xmobar
     icestorm
     imagemagick
+    img2txt
     jq
     lastpass-cli
     lolcat
@@ -171,6 +172,11 @@
           sha256 = "0nrsrd5cqyv2zydzzl1vryrnj1p0x17cx1rmrp4kmzh83bzgcfvv";
         };
       });
+
+      img2txt = pkgs.callPackage ./custom-packages/img2txt {
+        inherit (pkgs) fetchFromGitHub licenses;
+        inherit (pkgs.pythonPackages) buildPythonPackage docopt pillow;
+      };
     };
   };
 
