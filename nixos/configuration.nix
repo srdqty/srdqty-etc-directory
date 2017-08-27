@@ -49,6 +49,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     arachne-pnr
+    aseprite
     awscli
     binutils
     blender
@@ -177,6 +178,8 @@
         inherit (pkgs) fetchFromGitHub licenses;
         inherit (pkgs.pythonPackages) buildPythonPackage docopt pillow;
       };
+
+      aseprite = pkgs.callPackage ./custom-packages/aseprite { };
     };
   };
 
