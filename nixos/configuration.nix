@@ -98,6 +98,7 @@
     slack
     smplayer # requires mpv
     spotify
+    sql-workbench
     stack
     stalonetray
     steam
@@ -184,6 +185,14 @@
       };
 
       aseprite = pkgs.callPackage ./custom-packages/aseprite { };
+
+      sql-workbench = pkgs.callPackage ./custom-packages/sql-workbench {
+        mysql-jdbc = pkgs.callPackage ./custom-packages/mysql-jdbc { };
+        postgresql-jdbc = pkgs.callPackage ./custom-packages/postgresql-jdbc { };
+        redshift-jdbc = pkgs.callPackage ./custom-packages/redshift-jdbc { };
+
+        inherit (pkgs) stdenv fetchurl jre unzip;
+      };
     };
   };
 
