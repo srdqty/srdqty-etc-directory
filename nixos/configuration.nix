@@ -70,6 +70,7 @@
     gnumake
     gnupg
     google-chrome
+    gtkwave
     haskellPackages.hlint
     haskellPackages.xmobar
     icestorm
