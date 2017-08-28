@@ -80,6 +80,7 @@
     lolcat
     mlton
     mpv
+    ncurses
     networkmanagerapplet
     nix-repl
     p7zip
@@ -102,6 +103,8 @@
     steam
     tmux
     tree
+    udisks2
+    udiskie
     unrar
     unzip
     rxvt_unicode-with-plugins
@@ -116,6 +119,7 @@
     yabause
     yosys
     youtube-dl
+    zathura
   ];
 
   nixpkgs.config = {
