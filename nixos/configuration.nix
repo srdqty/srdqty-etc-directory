@@ -76,6 +76,7 @@
     imagemagick
     img2txt
     jq
+    kubectl
     lastpass-cli
     lolcat
     mlton
@@ -193,6 +194,8 @@
 
         inherit (pkgs) stdenv fetchurl jre unzip;
       };
+
+      kubectl = pkgs.callPackage ./custom-packages/kubectl { };
     };
   };
 
