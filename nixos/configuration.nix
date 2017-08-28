@@ -84,6 +84,7 @@
     ncurses
     networkmanagerapplet
     nix-repl
+    numlockx
     p7zip
     parcellite
     pciutils
