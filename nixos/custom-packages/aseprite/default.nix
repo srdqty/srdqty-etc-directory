@@ -21,6 +21,7 @@ stdenv.mkDerivation rec {
 
   cmakeFlags = ''
     -DENABLE_UPDATER=OFF
+    -GNinja
   '';
 
   NIX_LDFLAGS = "-lX11";
