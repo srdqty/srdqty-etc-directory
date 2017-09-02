@@ -53,6 +53,7 @@
     awscli
     binutils
     blender
+    blueman
     cabal2nix
     curl
     deadbeef
@@ -235,6 +236,7 @@
   };
 
   hardware.opengl.driSupport32Bit = true;
+  hardware.bluetooth.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.srdqty = {
