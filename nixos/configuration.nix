@@ -67,7 +67,7 @@
     gambatte
     gettext
     gimp
-    git
+    gitSVN
     gnumake
     gnupg
     google-chrome
@@ -235,8 +235,13 @@
     };
   };
 
-  hardware.opengl.driSupport32Bit = true;
-  hardware.bluetooth.enable = true;
+  hardware = {
+    opengl.driSupport32Bit = true;
+    pulseaudio.enable = true;
+    pulseaudio.package = pkgs.pulseaudioFull;
+    bluetooth.enable = true;
+    firmware = with pkgs; [ broadcom-bt-firmware ];
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.srdqty = {
@@ -253,6 +258,7 @@
       "audio"
       "video"
       "mediatomb"
+      "lp"
     ];
     createHome = true;
     home = "/home/srdqty";

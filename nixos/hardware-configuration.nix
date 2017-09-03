@@ -17,13 +17,19 @@
       fsType = "ext4";
     };
 
+  fileSystems."/var/lib/docker/devicemapper" =
+    { device = "/var/lib/docker/devicemapper";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/117E-DB85";
       fsType = "vfat";
     };
 
-  fileSystems."/var/lib/docker/devicemapper" =
-    { device = "/var/lib/docker/devicemapper";
+  fileSystems."/var/lib/docker/plugins" =
+    { device = "/var/lib/docker/plugins";
       fsType = "none";
       options = [ "bind" ];
     };
