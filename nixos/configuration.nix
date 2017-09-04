@@ -92,6 +92,7 @@
     pciutils
     playerctl
     playonlinux
+    pnmixer
     PPSSPP
     qbittorrent
     racket
