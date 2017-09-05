@@ -107,6 +107,7 @@
     lastpass-cli
     rxvt_unicode-with-plugins
     numlockx
+    pnmixer
   ];
 
   nixpkgs.config = {
