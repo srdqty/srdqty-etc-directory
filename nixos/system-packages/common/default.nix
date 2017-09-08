@@ -1,5 +1,6 @@
 { pkgs }: with pkgs;
   [
+    alarm-clock-applet
     arachne-pnr
     aseprite
     awscli
