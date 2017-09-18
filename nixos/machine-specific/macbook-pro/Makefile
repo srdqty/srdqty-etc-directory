@@ -1,3 +1,3 @@
 .PHONY: link-machine-specific-files
 link-machine-specific-files:
-	${prefix}/scripts/make-sym-link.sh ${prefix} configuration.nix
+	${prefix}/scripts/copy-file.sh ${prefix} configuration.nix

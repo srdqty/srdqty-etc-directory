@@ -3,6 +3,8 @@
 
 !/.gitignore
 
+!/todo.txt
+
 !/nixos
 /nixos/hardware-configuration.nix
 /nixos/configuration.nix

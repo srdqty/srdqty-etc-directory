@@ -1,0 +1,4 @@
+* Get rid of nixos/machine-specific directory
+* Refactor configuration.nix to further split up into multiple files
+* Alternative to copying files.
+* Decide how machine-specific config should be handled

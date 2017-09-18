@@ -20,4 +20,4 @@ else
   mkdir -p "$(dirname  ${OUTPUT_PATH})"
 fi
 
-ln -s "$(pwd)/${RELATIVE_PATH}" ${OUTPUT_PATH}
+cp "$(pwd)/${RELATIVE_PATH}" ${OUTPUT_PATH}
