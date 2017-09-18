@@ -6,3 +6,6 @@ link-machine-specific-files:
 	make -C hardware link-machine-specific-files \
 		prefix=$(shell pwd) \
 		machine=${machine}
+	make -C machine-specific link-machine-specific-files \
+		prefix=$(shell pwd) \
+		machine=${machine}
