@@ -23,7 +23,7 @@
     gitSVN
     gnumake
     gnupg
-    google-chrome
+    chromium
     gtkwave
     haskellPackages.hlint
     haskellPackages.xmobar
