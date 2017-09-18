@@ -9,3 +9,7 @@ link-machine-specific-files:
 	make -C machine-specific link-machine-specific-files \
 		prefix=$(shell pwd) \
 		machine=${machine}
+
+.PHONY: set-channel
+set-channel:
+	nix-channel --add https://d3g5gsiof5omrk.cloudfront.net/nixos/unstable/nixos-18.03pre114421.799435b7ca nixos
