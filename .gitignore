@@ -4,3 +4,5 @@
 !/.gitignore
 
 !/nixos
+/nixos/hardware-configuration.nix
+/nixos/*.bak
