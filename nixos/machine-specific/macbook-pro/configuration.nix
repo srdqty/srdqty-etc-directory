@@ -64,67 +64,16 @@
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
-    lolcat
-    figlet
-    fortune
-    vimHugeX
-    awscli
-    dos2unix
-    ffmpeg
-    git
-    gnumake
-    google-chrome
-    networkmanagerapplet
-    pciutils
-    ripgrep
-    slack
-    stack
-    trayer
-    tree
-    xclip
-    haskellPackages.xmobar
-    haskellPackages.hlint
-    xscreensaver
-    docker_compose
-    gnupg
-    parcellite
-    jq
-    gettext
-    terminator
-    xdotool
-    binutils
-
-#    blueman
-    readline
-    scrot
-    spotify
-    stalonetray
-    playerctl
-    qmmp
-    unzip
-#    haskell.compiler.ghc801
-    lastpass-cli
-    rxvt_unicode-with-plugins
-    numlockx
-    pnmixer
-  ];
+  environment.systemPackages =
+    let
+      common = (import ./system-packages/common);
+    in
+      (common { inherit pkgs; });
 
   nixpkgs.config = {
     allowUnfree = true;
 
-    packageOverrides = pkgs: {
-
-      lastpass-cli = pkgs.lastpass-cli.overrideAttrs (oldAttrs: rec {
-        version = "1.2.1";
-        src = pkgs.fetchFromGitHub {
-          owner = "lastpass";
-          repo = "lastpass-cli";
-          rev = "eda59f8b9a064c38b8a6d3093695ee0d29afe837";
-          sha256 = "0nrsrd5cqyv2zydzzl1vryrnj1p0x17cx1rmrp4kmzh83bzgcfvv";
-        };
-      });
-    };
+    packageOverrides = (import ./package-overrides/common);
   };
 
   # List services that you want to enable:
