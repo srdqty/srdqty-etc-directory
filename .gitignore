@@ -9,3 +9,5 @@
 /nixos/hardware-configuration.nix
 /nixos/configuration.nix
 /nixos/*.bak
+
+*.swp

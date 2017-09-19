@@ -67,4 +67,13 @@ pkgs: {
   };
 
   kubectl = pkgs.callPackage ../../custom-packages/kubectl { };
+
+  docker-compose-1-14-0 = pkgs.docker_compose.overrideAttrs (oldAttrs: rec {
+    name = "docker-compose-${version}";
+    version = "1.14.0";
+    src = pkgs.fetchurl {
+      url = "mirror://pypi/d/docker-compose/${name}.tar.gz";
+      sha256 = "0ybc4x7bydkp0fnnk3dw6gxcm4b91vgaprjliqlnc6ziym6i4jan";
+    };
+  });
 }

@@ -10,7 +10,7 @@
     cabal2nix
     curl
     deadbeef
-    docker_compose
+    docker-compose-1-14-0
     dolphinEmu
     dos2unix
     ffmpeg
