@@ -23,6 +23,7 @@
     gitSVN
     gnumake
     gnupg
+    guvcview
     chromium
     gtkwave
     haskellPackages.hlint
