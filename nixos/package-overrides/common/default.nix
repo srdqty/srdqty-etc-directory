@@ -76,4 +76,13 @@ pkgs: {
       sha256 = "0ybc4x7bydkp0fnnk3dw6gxcm4b91vgaprjliqlnc6ziym6i4jan";
     };
   });
+
+  spotify = pkgs.spotify.overrideAttrs (oldAttrs: rec {
+    name = "icestorm-${version}";
+    version = "1.0.64.407.g9bd02c2d-26";
+    src = pkgs.fetchurl {
+      url = "https://repository-origin.spotify.com/pool/non-free/s/spotify-client/spotify-client_${version}_amd64.deb";
+      sha256 = "0zc8vclf1wx60yllc1jgzhqyv5lkwz95qmmy5f79zkj6vrdak5wc";
+    };
+  });
 }
