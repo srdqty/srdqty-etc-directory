@@ -85,4 +85,6 @@ pkgs: {
       sha256 = "0zc8vclf1wx60yllc1jgzhqyv5lkwz95qmmy5f79zkj6vrdak5wc";
     };
   });
+
+  weechat = pkgs.callPackage ../../custom-packages/weechat { };
 }
