@@ -9,8 +9,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "aseprite";
     repo = "aseprite";
-    rev = "cf3814bc201dade41b7336e3a37e812b9fddd55e";
-    sha256 = "18smczxzlll1qlnjgyvwkfw2w7l9bqidwznl54cym3lld71kbq39";
+    rev = "aa95ccde80350cab6b7cb6afe5bba3005de8f098";
+    sha256 = "06jmgck90vf7k8l51zvmjwvrdxd07k95d8msg5ns69riahzvnkcy";
     fetchSubmodules = true;
   };
 
