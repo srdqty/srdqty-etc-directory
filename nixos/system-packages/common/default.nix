@@ -32,6 +32,8 @@
     imagemagick
     img2txt
     jq
+    keybase
+    keybase-gui
     kubectl
     lastpass-cli
     lolcat
