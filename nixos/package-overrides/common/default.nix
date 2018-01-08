@@ -78,11 +78,20 @@ pkgs: {
   });
 
   spotify = pkgs.spotify.overrideAttrs (oldAttrs: rec {
-    name = "icestorm-${version}";
-    version = "1.0.64.407.g9bd02c2d-26";
+    name = "spotify-${version}";
+    version = "1.0.70.399.g5ffabd56-26";
     src = pkgs.fetchurl {
       url = "https://repository-origin.spotify.com/pool/non-free/s/spotify-client/spotify-client_${version}_amd64.deb";
-      sha256 = "0zc8vclf1wx60yllc1jgzhqyv5lkwz95qmmy5f79zkj6vrdak5wc";
+      sha256 = "0kpakz11xkyqqjvln4jkhc3z5my8zgpw8m6jx954cjdbc6vkxd29";
+    };
+  });
+
+  slack = pkgs.slack.overrideAttrs (oldAttrs: rec {
+    name = "slack-${version}";
+    version = "3.0.2";
+    src = pkgs.fetchurl {
+      url = "https://downloads.slack-edge.com/linux_releases/slack-desktop-${version}-amd64.deb";
+      sha256 = "1w3swb4zsvrbpr5jn6znwphhk4hian8d4m4746ilcly5k00bg0q5";
     };
   });
 
