@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "http://www.sql-workbench.net/Workbench-Build${version}.zip";
-    sha256 = "1g0ifccny5nkdm9miidg05gaz5gh8n7xcsfyz80asirggcr41bl4";
+    sha256 = "14xnv9lc617ks738nf8xyl7rw9y17p7w3i26nm2dvvx6p9l400ck";
   };
 
   nativeBuildInputs = [
