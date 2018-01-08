@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   boot.initrd.luks.devices = [
     {
       name = "root";
@@ -145,6 +147,6 @@
   programs.bash.enableCompletion = true;
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.03";
+  system.stateVersion = "18.03";
 
 }

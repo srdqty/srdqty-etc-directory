@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -122,7 +124,7 @@
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.03";
+  system.stateVersion = "18.03";
 
   virtualisation.docker.enable = true;
 
