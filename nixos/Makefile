@@ -12,7 +12,7 @@ link-machine-specific-files:
 
 .PHONY: set-channel
 set-channel:
-	nix-channel --add https://d3g5gsiof5omrk.cloudfront.net/nixos/unstable/nixos-18.03pre117013.aebdc892d6 nixos
+	nix-channel --add https://d3g5gsiof5omrk.cloudfront.net/nixos/unstable-small/nixos-18.03pre124926.e5d9d61d652 nixos
 
 .PHONY: print-current-nixpkgs-version
 print-current-nixpkgs-version:
