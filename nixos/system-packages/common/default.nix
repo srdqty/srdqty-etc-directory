@@ -46,6 +46,7 @@
     p7zip
     parcellite
     pciutils
+    pdftk
     playerctl
     playonlinux
     pnmixer
