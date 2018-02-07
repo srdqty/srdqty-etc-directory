@@ -3,6 +3,7 @@
     alarm-clock-applet
     arachne-pnr
     aseprite
+    aspell-en
     awscli
     binutils
     blender

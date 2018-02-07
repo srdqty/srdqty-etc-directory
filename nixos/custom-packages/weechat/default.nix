@@ -71,7 +71,8 @@ stdenv.mkDerivation rec {
       ${optionalString perlSupport "--prefix PATH : ${perl}/bin"} \
       --prefix PATH : ${pythonPackages.python}/bin \
       --prefix PYTHONPATH : "$PYTHONPATH" \
-      --prefix PYTHONPATH : "$NIX_PYTHONPATH"
+      --prefix PYTHONPATH : "$NIX_PYTHONPATH" \
+      --set ASPELL_CONF 'dict-dir ${aspell}/lib/aspell'
   '';
 
   meta = {

@@ -1,4 +1,4 @@
-pkgs: {
+pkgs: rec {
   icestorm = pkgs.icestorm.overrideAttrs (oldAttrs: rec {
     name = "icestorm-${version}";
     version = "2017.08.01";
@@ -95,5 +95,9 @@ pkgs: {
     };
   });
 
-  weechat = pkgs.callPackage ../../custom-packages/weechat { };
+  weechat = pkgs.callPackage ../../custom-packages/weechat {
+    aspell = aspell-en;
+  };
+
+  aspell-en = pkgs.aspellWithDicts (d: [d.en]);
 }
