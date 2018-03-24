@@ -1,6 +1,7 @@
 { pkgs }: with pkgs;
   [
     alarm-clock-applet
+    alsaUtils
     arachne-pnr
     aseprite
     aspell-en
@@ -51,6 +52,7 @@
     playerctl
     playonlinux
     pnmixer
+    pythonPackages.livestreamer
     PPSSPP
     qbittorrent
     racket
