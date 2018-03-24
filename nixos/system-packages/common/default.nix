@@ -39,6 +39,7 @@
     kubectl
     lastpass-cli
     lolcat
+    mame
     mlton
     mpv
     ncurses

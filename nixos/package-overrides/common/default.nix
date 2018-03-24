@@ -100,4 +100,6 @@ pkgs: rec {
   };
 
   aspell-en = pkgs.aspellWithDicts (d: [d.en]);
+
+  mame = pkgs.callPackage ../../custom-packages/mame {};
 }
